@@ -32,7 +32,7 @@ public class PandaApplicationSeleniumTest {
         driver = new RemoteWebDriver(new URL("http://192.168.44.44:4444/wd/hub"), capabilities);
         // Pamiętaj, że aplikacja Spring musi działać! To znaczy też musi być włączona.
         
-        driver.get(String.format("http://jenkins:%d/", port));
+        driver.get(String.format("http://jenkins2:%d/", port));
         //nie chcial isc pipeline ci/cd jak byl adres ip jak zmienilem na nazwe domenowa poszlo
 
         //Czekamy 2 sekundy

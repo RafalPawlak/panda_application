@@ -65,15 +65,14 @@ pipeline {
            sh 'mvn -s $MAVEN_SETTINGS deploy -Dmaven.test.skip=true -e'
             }
         }
-  
+       
+    }
+ }
              post{
      always  {
          sh 'docker stop pandaapp'
          deleteDir()
         }
      }
-     
-    }
- }
 
 }

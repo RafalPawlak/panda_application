@@ -91,7 +91,6 @@ pipeline {
                 sh 'ansible-playbook -i ./inventory playbook.yaml'
             } 
         }
-    }
 
              post{
      always  {
@@ -100,4 +99,5 @@ pipeline {
         }
      }
     }   
+}
 }

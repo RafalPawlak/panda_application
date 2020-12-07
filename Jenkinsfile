@@ -72,7 +72,7 @@ pipeline {
             stage('Run terraform'){
                steps{
                 // Run Maven on a Unix agent.
-                dir('infrastructure/terraform')
+                dir('infrastructure/terraform'){
                 sh 'terraform init && terraform apply -auto-approve'
             } 
         }
@@ -87,7 +87,7 @@ pipeline {
          stage('Run ansible'){
                steps{
                 // Run Maven on a Unix agent.
-                dir('infrastructure/ansible')
+                dir('infrastructure/ansible'){
                 sh 'chmod 600 ../panda-nowe-klucze.pem'
                 sh 'ansible-playbook -i ./inventory playbook.yaml'
             } 

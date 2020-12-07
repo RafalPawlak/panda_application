@@ -9,9 +9,9 @@ variable "elb_availability_zones" {
 }
 
 variable "aws_key_name" {
-  description = "Nawa klucza dodanego w AWS"
+  description = "panda-nowe-klucze"
 }
 
 variable "ssh_key_path" {
-  description = "Sciezka do klucza SSH"
+  description = "../panda-nowe-klucze.pem"
 }

@@ -68,9 +68,6 @@ pipeline {
             }
         }
        
-    }
- }
-
             stage('Run terraform'){
                steps{
                 // Run Maven on a Unix agent.

@@ -89,7 +89,7 @@ pipeline {
                 // Run Maven on a Unix agent.
                 dir('infrastructure/ansible'){
                 sh 'chmod 600 ../panda-nowe-klucze.pem'
-                sh 'ansible-playbook -i ./inventory playbook.yaml'
+                sh 'ansible-playbook -i ./inventory playbook.yml'
             } 
         }
     }

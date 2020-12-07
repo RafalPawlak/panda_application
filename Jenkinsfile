@@ -82,7 +82,7 @@ pipeline {
          stage('Copy ansible role'){
                steps{
                 // Run Maven on a Unix agent.
-                sh 'cp -r infrastructure/ansible/panda/ /etc/ansible/roles/
+                sh 'cp -r infrastructure/ansible/panda/ /etc/ansible/roles/'
             } 
         }
 

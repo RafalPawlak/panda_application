@@ -91,13 +91,12 @@ pipeline {
                 sh 'ansible-playbook -i ./inventory playbook.yaml'
             } 
         }
-
-             post{
+  
+    }
+              post{
      always  {
          sh 'docker stop pandaapp'
          deleteDir()
         }
-     }
-    }   
-}
+     }   
 }

@@ -73,7 +73,7 @@ pipeline {
                steps{
                 // Run Maven on a Unix agent.
                 dir('infrastructure/terraform'){
-                sh 'terraform init && terraform apply -auto-approve'
+                sh 'terraform init && terraform apply -var-file ./panda.tfvars -auto-approve'
             } 
         }
     }

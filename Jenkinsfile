@@ -67,6 +67,7 @@ pipeline {
            sh 'mvn -s $MAVEN_SETTINGS deploy -Dmaven.test.skip=true -e'
             }
         }
+    }
        
             stage('Run terraform'){
                steps{
@@ -75,7 +76,7 @@ pipeline {
                 sh 'terraform init && terraform apply -auto-approve'
             } 
         }
-
+    }
          stage('Copy ansible role'){
                steps{
                 // Run Maven on a Unix agent.

@@ -1,6 +1,5 @@
 ---
 - hosts: aws
   roles:
-   - panda
-  become: true    
+   - panda   
 
